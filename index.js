@@ -14,10 +14,12 @@ app.use(express.json());
 app.use(userRoute);
 app.use(offerRoute);
 
+app.all("*", (req, res) => {
+    res.status(404).json({message: "all routes"})
+})
+
 app.listen(8000, () => {
     console.log("port : 8000 Server started");
 });
 
-app.all("*", (req, res) => {
-    res.status(404).json({message: "all routes"})
-})
+
