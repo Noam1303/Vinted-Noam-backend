@@ -1,6 +1,7 @@
 const express = require('express');
 const cloudinary = require("cloudinary").v2;
 const router = express.Router();
+require('dotenv').config(); 
 
 const Offer = require('./models/Offer');
 const auth = require('../middleware/auth');
@@ -10,8 +11,8 @@ const fileUpload = require("express-fileupload");
 
 cloudinary.config({
     cloud_name: "dvghwc4ix",
-    api_key: "681196133986342",
-    api_secret: "JPG_irMimw6PE-OhHPYxMhaN8B0"
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
 });
 
 const convertToBase64 = (file) => {
