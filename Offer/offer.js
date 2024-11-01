@@ -10,7 +10,7 @@ const User = require('../User/models/User');
 const fileUpload = require("express-fileupload");
 
 cloudinary.config({
-    cloud_name: "dvghwc4ix",
+    cloud_name: process.env.CLOUD_NAME,
     api_key: process.env.API_KEY,
     api_secret: process.env.API_SECRET
 });
