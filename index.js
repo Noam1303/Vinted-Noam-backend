@@ -18,7 +18,7 @@ app.all("*", (req, res) => {
     res.status(404).json({message: "all routes"})
 })
 
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
     console.log("port : 8000 Server started");
 });
 
