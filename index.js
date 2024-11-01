@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(userRoute);
 app.use(offerRoute);
 
-app.listen(process.env.PORT, () => {
-    console.log("port : "+process.env.PORT+" Server started");
+app.listen(8000, () => {
+    console.log("port : 8000 Server started");
 });
 
 app.all("*", (req, res) => {
