@@ -5,7 +5,7 @@ const offerRoute = require('./Offer/offer')
 require('dotenv').config(); 
 const cors = require('cors');
 
-mongoose.connect(process.env.MONGODB_URL);
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
