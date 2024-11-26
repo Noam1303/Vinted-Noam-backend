@@ -1,11 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
+// importation des route de user et de offer
 const userRoute = require('./User/user');
 const offerRoute = require('./Offer/offer')
 require('dotenv').config(); 
 const cors = require('cors');
 
+// connection a la base de donnée
 mongoose.connect(process.env.MONGODB_URI);
+
 
 const app = express();
 
@@ -19,7 +23,7 @@ app.all("*", (req, res) => {
 })
 
 app.listen(process.env.PORT, () => {
-    console.log("port : 8000 Server started");
+    console.log("port: "+process.env.PORT+" Server started");
 });
 
 

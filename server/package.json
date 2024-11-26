@@ -4,13 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@stripe/react-stripe-js": "^3.0.0",
+    "@stripe/stripe-js": "^5.2.0",
     "axios": "^1.7.7",
     "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
@@ -18,8 +21,12 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-fileupload": "^1.5.1",
+    "generate-password": "^1.7.1",
     "mongoose": "^8.7.3",
     "nodemon": "^3.1.7",
+    "stride": "^2.1.0",
+    "stridejs": "^0.11.4",
+    "stripe": "^17.4.0",
     "uid2": "^1.0.0"
   }
 }
